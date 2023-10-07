@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "name": "Tech Meetups and Networking Nights",
+      "img": "https://i.ibb.co/BLDDrBH/1.jpg",
+      "price": 250,
+      "description": "Facilitate regular meetups for local technology enthusiasts, providing a platform for networking, idea sharing, and collaborative engagement. The event is designed to create a vibrant and inclusive space for individuals passionate about technology to connect and interact."
+    },
+    {
+      "id": 2,
+      "name": "Tech Workshops and Training Sessions",
+      "img": "https://i.ibb.co/bsMrjHC/2.jpg",
+      "price": 350,
+      "description": "Conduct expert-led workshops covering cutting-edge topics such as Artificial Intelligence, blockchain, and cybersecurity. These sessions aim to empower attendees by offering in-depth knowledge and practical skills development. Participants have the opportunity to elevate their proficiency in key technological domains."
+    },
+    {
+      "id": 3,
+      "name": "Startup Pitch Competitions",
+      "img": "https://i.ibb.co/9wmDMhB/3.jpg",
+      "price": 300,
+      "description": "Provide a platform for aspiring startups to present their innovative ideas to a distinguished panel of judges and potential investors. This event mirrors the format of high-stakes pitch competitions, offering startups an opportunity to showcase their projects, receive valuable feedback, and seek financial backing from interested parties."
+    },
+    {
+      "id": 4,
+      "name": "Hackathons (Specialized Editions)",
+      "img": "https://i.ibb.co/c2L4MdG/4.jpg",
+      "price": 400,
+      "description": "Elevate traditional hackathons by introducing specialized editions focused on emerging technologies such as Augmented Reality/Virtual Reality (AR/VR), Internet of Things (IoT), and Social Good initiatives. These hackathons unite tech enthusiasts to collaboratively tackle real-world challenges, fostering innovation and problem-solving within specific technological domains."
+    },
+    {
+      "id": 5,
+      "name": "Tech Career Fairs",
+      "img": "https://i.ibb.co/b67cbTw/5.jpg",
+      "price": 250,
+      "description": "Forge connections between job seekers and technology companies through a curated career fair. This event serves as a matchmaker, facilitating interactions between skilled professionals and organizations actively seeking talent. Attendees have the opportunity to explore career prospects and engage with potential employers in the dynamic tech industry."
+    },
+    {
+      "id": 6,
+      "name": "Code Sprints and Challenges",
+      "img": "https://i.ibb.co/zxzbgJC/6.jpg",
+      "price": 300,
+      "description": "Organize coding sprints and challenges that present participants with specific problems to solve or innovative solutions to create. This event mirrors the intensity of an Olympic competition, challenging coding enthusiasts to showcase their skills under time constraints. It provides a platform for honing technical abilities and fostering a spirit of healthy competition within the coding community."
+    }
+  ]
+  
