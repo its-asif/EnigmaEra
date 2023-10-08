@@ -1,11 +1,26 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
+import { getAuth } from "firebase/auth";
 
 
 const Navbar = () => {
-    const navlinks = <>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-    </>
+    const {user, logOut} = useContext(AuthContext);
+    
+
+
+    const navlinks = (
+        <>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/about">About</NavLink></li>
+            <li><NavLink to="/login">Login</NavLink></li>
+        </>)
+
+    const handleSignOut = () =>{
+    logOut()
+        .then()
+        .catch()
+    }
 
     return (
         <div>
@@ -27,12 +42,22 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                        <div className="w-10 rounded-full">
-                        <img src="/user.png" />
-                        </div>
-                    </label>
-                    <a className="btn">SignOUt</a>
+                {
+                    user ? 
+                    <>
+                        <p className="text-md font-bold">{user.displayName}</p>
+                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar mx-3">
+                            <div className="w-10 rounded-full">
+                                <img src="https://plus.unsplash.com/premium_photo-1661634872659-fc4ccdecc5cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" />
+                            </div>
+                        </label>
+                        <button className="btn" onClick={handleSignOut}>LogOut</button>
+                    </>
+                    :
+                    <Link to="/login">
+                        <button className="btn">Login</button>
+                    </Link>
+                }
                 </div>
             </div>
         </div>
