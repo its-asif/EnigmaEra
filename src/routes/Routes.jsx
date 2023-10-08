@@ -27,7 +27,8 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/news/:id',
-                element: <PrivateRoute><CardDetails></CardDetails></PrivateRoute>
+                element: <PrivateRoute><CardDetails></CardDetails></PrivateRoute>,
+                loader: () => fetch('/data.json')
             }
         ]
     }

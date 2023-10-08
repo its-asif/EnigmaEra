@@ -18,13 +18,13 @@ const Login = () => {
         console.log(email, password);
 
         signIn(email, password)
-        .then(res => {
-            console.log(res.user)
-            
-            // navigate after login
-            navigate( location?.state ? location.state : '/');
-        })
-        .then(err => console.log("error",err));
+            .then(res => {
+                console.log(res.user)
+                
+                // navigate after login
+                navigate( location?.state ? location.state : '/');
+            })
+            .then(err => console.log("error",err));
     }
 
     return (
