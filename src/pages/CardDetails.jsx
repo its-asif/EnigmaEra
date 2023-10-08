@@ -1,3 +1,4 @@
+import toast, { Toaster } from "react-hot-toast";
 import { useLoaderData, useParams } from "react-router-dom";
 
 
@@ -9,6 +10,7 @@ const CardDetails = () => {
 
     return (
         <div>
+            <Toaster/>
             <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:w-1/2">
                 <img src={img} className="w-full rounded-lg shadow-2xl" />
@@ -16,7 +18,20 @@ const CardDetails = () => {
                 <h1 className="text-4xl font-bold text-center mt-5">{name}</h1>
                 <p className="pt-6 text-justify">{description}</p>
                 <p className="py-2 text-xl font-semibold">Our Service Charge : ${price}</p>
-                <div className="text-right"><button className="btn btn-error text-white text-lg font-bold">Order Service</button></div>
+                <div className="text-right"><button className="btn btn-error text-white text-lg font-bold"
+                    onClick={() =>{
+                        toast('We will soon contact you!',
+                        {
+                            icon: '👏',
+                            style: {
+                            borderRadius: '10px',
+                            background: '#333',
+                            color: '#fff',
+                            },
+                        }
+                    );
+                    }}
+                >Order Service</button></div>
                 </div>
             </div>
             </div>
