@@ -4,6 +4,8 @@ import Home from "../pages/home/Home";
 import Roots from "../layouts/Roots";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import PrivateRoute from "./PrivateRoutes";
+import CardDetails from "../pages/CardDetails";
 
 const routes = createBrowserRouter([
     {
@@ -12,7 +14,8 @@ const routes = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('/data.json')
             },
             {
                 path: '/login',
@@ -21,6 +24,10 @@ const routes = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/news/:id',
+                element: <PrivateRoute><CardDetails></CardDetails></PrivateRoute>
             }
         ]
     }

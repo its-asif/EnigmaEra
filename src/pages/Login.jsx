@@ -29,7 +29,6 @@ const Login = () => {
 
     return (
         <div>
-            <Navbar></Navbar>
             <div>
                 <h2 className="text-4xl my-10 font-bold text-center">Please Login</h2>
                 <form className="w-3/4 md:w-1/2 lg:w-1/3 mx-auto" onSubmit={handleLogin}>
