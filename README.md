@@ -10,6 +10,12 @@ Currently, two official plugins are available:
 
 
 
+<div align="center">
+  <img height="60" src="https://edurev.gumlet.io/AllImages/original/ApplicationImages/CourseImages/944e5d47-8c55-4a89-91e5-22ab5f2798fc_CI.png">
+  <h1>MCQ TEST</h1>
+</div>
+
+
 ###### 1. Write the `correct answer` from the following options and give an explanation (2-5 lines).
 
 ```javascript
