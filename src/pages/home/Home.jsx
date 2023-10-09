@@ -3,6 +3,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import Footer from "../Shared/Footer";
 import Navbar from "../Shared/Navbar";
 import Slider from "./Slider";
+import Review from "./Review";
 
 
 const Home = () => {
@@ -36,6 +37,9 @@ const Home = () => {
                 )
             }
             </div>
+
+
+            <Review/>
         </div>
     );
 };

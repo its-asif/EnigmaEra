@@ -56,7 +56,7 @@ const Books = () => {
 
   return (
     <div className="w-3/4 mx-auto text-justify">
-      <h2 className="text-4xl text-center my-8 font-semibold">Book Recommendations</h2>
+      <h2 className="text-4xl text-center my-8 font-semibold bg-neutral text-white p-5 rounded-md w-fit mx-auto">Book Recommendations</h2>
       <ul className="list-disc">
         {books.map((book, index) => (
           <li key={index} className="mb-5">

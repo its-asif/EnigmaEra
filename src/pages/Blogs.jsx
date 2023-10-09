@@ -95,11 +95,11 @@ const Blogs = () => {
 
   return (
     <div>
-      <h2 className="text-4xl text-center my-8 font-semibold">Recent Blog Posts</h2>
+      <h2 className="text-4xl w-fit mx-auto my-8 font-semibold bg-neutral text-white p-5 rounded-md">Recent Blog Posts</h2>
       <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-10 gap-5 cursor-pointer'>
         {visiblePosts.map((post, index) => (
             <div className=''>
-                <div className="card bg-neutral text-neutral-content h-full">
+                <div className="card bg-neutral-content h-full">
                 <div className="card-body items-center text-center">
                     <h2 className="card-title text-2xl">{post.title}</h2>
                     <p className='ml-auto'>by {post.author}</p>
@@ -108,11 +108,6 @@ const Blogs = () => {
                 </div>
             </div>
             
-        //   <li key={index}>
-        //     <h3>{post.title}</h3>
-        //     <p>By {post.author}</p>
-        //     <p>{post.description}</p>
-        //   </li>
         ))}
       </ul>
       {!showAll && (
@@ -125,12 +120,4 @@ const Blogs = () => {
     </div>
   );
 };
-// return (
-//     <div>
-//       <h2>Recent Blog Posts</h2>
-      
-      
-//     </div>
-//   );
-// };
 export default Blogs;

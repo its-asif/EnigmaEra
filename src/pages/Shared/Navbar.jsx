@@ -15,7 +15,7 @@ const Navbar = () => {
             <li><NavLink to="/about">About</NavLink></li>
             { !user && <li><NavLink to="/register">Register</NavLink></li>}
             { user &&(
-                    <div className="flex">
+                    <div className="flex flex-col lg:flex-row">
                         <li><NavLink to="/blogs">Blogs</NavLink></li>
                         <li><NavLink to="/books">Book Recommendations</NavLink></li>
                     </div> )
