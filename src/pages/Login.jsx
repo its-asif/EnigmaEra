@@ -3,12 +3,26 @@ import Navbar from "./Shared/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
+import { signInWithPopup, GoogleAuthProvider, getAuth } from "firebase/auth";
+import app from "../firebase/firebase.config";
 
 
 const Login = () => {
     const {signIn} = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
+    const provider = new GoogleAuthProvider();
+
+    const auth = getAuth(app);
+    const handleGoogleSignIn = () =>{
+        signInWithPopup(auth, provider)
+        .then((result) => {
+            console.log(result.user);
+            // ...
+        }).catch((error) => {
+            console.log(error);
+        });
+    }
 
     const handleLogin = e =>{
         e.preventDefault();
@@ -56,6 +70,16 @@ const Login = () => {
                     </div>
                 </form>
                 <p className="text-center mt-4">Don't have an account? <Link className="text-blue-600" to="/register">Register</Link></p>
+            </div>
+            <div>
+                <h1 className="text-center text-4xl font-bold my-8">-------------------OR-------------------</h1>
+
+                <div className="text-center">
+                    <button 
+                    className="btn bg-blue-500 text-white font-bold text-xl"
+                    onClick={handleGoogleSignIn}
+                    >Continue with Google</button>
+                </div>
             </div>
         </div>
     );
