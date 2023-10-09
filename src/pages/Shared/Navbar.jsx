@@ -6,7 +6,7 @@ import { getAuth } from "firebase/auth";
 
 const Navbar = () => {
     const {user, logOut} = useContext(AuthContext);
-    
+
 
 
     const navlinks = (
@@ -54,7 +54,7 @@ const Navbar = () => {
                         <p className="text-md font-bold">{user.displayName}</p>
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar mx-3">
                             <div className="w-10 rounded-full">
-                                <img src="https://plus.unsplash.com/premium_photo-1661634872659-fc4ccdecc5cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" />
+                                <img src={user.photoURL} />
                             </div>
                         </label>
                         <button className="btn" onClick={handleSignOut}>LogOut</button>

@@ -1,6 +1,15 @@
-import React from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
+
+    
 const UpcomingEvents = () => {
+        
+        useEffect(() => {
+            AOS.init();
+          }, [])
+    
   const events = [
     {
       id: 1,
@@ -37,15 +46,15 @@ const UpcomingEvents = () => {
       time: "1:00 PM - 3:00 PM",
       description: "Get insights from industry experts on the latest trends in digital marketing.",
     },
-    // Add more events as needed
+    
   ];
 
   return (
-    <section>
+    <section data-aos="fade-left">
      <h2 className="text-center mt-20 my-10 text-4xl md:text-6xl font-bold">Upcoming Events</h2>
       <ul className="grid grid-cols-1 md:grid-cols-2 mx-10 lg:mx-20 " >
         {events.map((event) => (
-          <li key={event.id} className="my-5">
+          <li key={event.id} className="my-5" data-aos="fade-up" data-aos-duration="1000">
             <h3 className="font-bold">{event.title}</h3>
             <p>Date: {event.date}</p>
             <p>Time: {event.time}</p>

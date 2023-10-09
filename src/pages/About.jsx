@@ -5,9 +5,11 @@ const About = () => {
         <div className='text-justify mx-80'>
 
 
+            <div >
             <h1 className='text-4xl font-bold  mt-10 my-5 text-center'>Welcome to Enigma Era</h1>
-
             <p>Embark on a journey through the enigmatic realms of technology and gaming with Enigma Era. At Enigma Era, we believe that the future is a puzzle waiting to be solved, an era where innovation and imagination collide.</p>
+            </div>
+
             <h1 className='text-4xl font-bold mt-10  my-5 text-center'>Our Vision</h1>
 
             <p>Enigma Era is not just an event management platform; it's a gateway to a universe where tech enthusiasts and gamers converge. We envision a future where every event is a piece of a grand puzzle, and each participant is a crucial solver.</p>

@@ -2,6 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "./Shared/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
 
 
 const Login = () => {
@@ -15,20 +16,23 @@ const Login = () => {
 
         const email = form.get('email');
         const password = form.get('password');
-        console.log(email, password);
+        // console.log(email, password);
+
+
 
         signIn(email, password)
-            .then(res => {
-                console.log(res.user)
+            .then((result) => {
+                toast.success("Successfully logged in")
                 
                 // navigate after login
                 navigate( location?.state ? location.state : '/');
             })
-            .then(err => console.log("error",err));
+            .catch((error) => toast.error("Email or Password didn't matched"));
     }
 
     return (
         <div className="min-h-[60vh]">
+        <Toaster/>
             <div>
                 <h2 className="text-4xl my-10 font-bold text-center">Please Login</h2>
                 <form className="w-3/4 md:w-1/2 lg:w-1/3 mx-auto" onSubmit={handleLogin}>
