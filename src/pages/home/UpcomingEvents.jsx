@@ -50,7 +50,7 @@ const UpcomingEvents = () => {
   ];
 
   return (
-    <section data-aos="fade-left">
+    <section data-aos="fade-right">
      <h2 className="text-center mt-20 my-10 text-4xl md:text-6xl font-bold">Upcoming Events</h2>
       <ul className="grid grid-cols-1 md:grid-cols-2 mx-10 lg:mx-20 " >
         {events.map((event) => (

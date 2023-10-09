@@ -72,7 +72,7 @@ const Login = () => {
                 <p className="text-center mt-4">Don't have an account? <Link className="text-blue-600" to="/register">Register</Link></p>
             </div>
             <div>
-                <h1 className="text-center text-4xl font-bold my-8">-------------------OR-------------------</h1>
+                <h1 className="text-center text-2xl lg:text-4xl font-bold my-8">--------------OR--------------</h1>
 
                 <div className="text-center">
                     <button 
