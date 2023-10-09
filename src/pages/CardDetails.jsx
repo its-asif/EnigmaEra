@@ -11,9 +11,9 @@ const CardDetails = () => {
     return (
         <div>
             <Toaster/>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen ">
             <div className="hero-content flex-col lg:w-1/2">
-                <img src={img} className="w-full rounded-lg shadow-2xl" />
+                <img src={img} className="w-full rounded-lg" />
                 <div>
                 <h1 className="text-4xl font-bold text-center mt-5">{name}</h1>
                 <p className="pt-6 text-justify">{description}</p>

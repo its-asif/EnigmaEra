@@ -13,6 +13,7 @@ const Home = () => {
         <div>
             <Slider/>    
 
+            {/* Services */}
             <h1 className="text-center mt-20 my-5 text-4xl md:text-6xl font-bold">Our Services</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-evenly mx-10 lg:mx-20 gap-10">    
             {
@@ -23,6 +24,7 @@ const Home = () => {
                     <div className="card-body">
                         <h2 className="card-title">{card.name}</h2>
                         <p>{card.description.slice(0,100)}.....</p> 
+                        <p className="font-semibold mt-3">Service Charge: ${card.price}</p> 
                         
                         <div className="card-actions justify-end ">
                             <Link to={`/news/${card.id}`}

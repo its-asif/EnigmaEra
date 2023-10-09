@@ -10,27 +10,23 @@ const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    const createUser = (email, password, name, photoUrl) =>{
+    const createUser = async (email, password, name, photoUrl) =>{
         setLoading(true);
 
-        return createUserWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                const user = userCredential.user;
-
-                // Update user's profile with additional info
-                return updateProfile(user, {
-                    displayName: name,
-                    photoURL: photoUrl,
-                }).then(() => {
-                    setLoading(false);
-                    return userCredential; // Return the entire userCredential
-                });
-            })
-            .catch((err) => {
-                setLoading(false);
-                // Handle errors
-                throw err;
+        try {
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            const user = userCredential.user;
+            await updateProfile(user, {
+                displayName: name,
+                photoURL: photoUrl,
             });
+            setLoading(false);
+            return userCredential;
+        } catch (err) {
+            setLoading(false);
+            // Handle errors
+            throw err;
+        }
     }
 
     const signIn = (email, password) =>{
@@ -45,8 +41,9 @@ const AuthProvider = ({children}) => {
 
     useEffect( () =>{
         const unSubscribe =  onAuthStateChanged(auth, (currentUser) => {
-            setUser(currentUser)});
+            setUser(currentUser);
             setLoading(false);
+        })
 
             return () => {
                 unSubscribe();
@@ -55,7 +52,7 @@ const AuthProvider = ({children}) => {
 
 
     const authInfo = {
-        user, createUser, logOut, signIn, loading
+        user, createUser, logOut, signIn, loading,
     }
     return (
         <div>
