@@ -4,6 +4,7 @@ import Footer from "../Shared/Footer";
 import Navbar from "../Shared/Navbar";
 import Slider from "./Slider";
 import Review from "./Review";
+import UpcomingEvents from "./UpcomingEvents";
 
 
 const Home = () => {
@@ -40,6 +41,8 @@ const Home = () => {
 
 
             <Review/>
+
+            <UpcomingEvents/>
         </div>
     );
 };
