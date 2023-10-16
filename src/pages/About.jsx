@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
     return (
-        <div className='text-justify mx-80'>
+        <div className='text-justify mx-10 lg:mx-80'>
 
 
             <div >

@@ -98,7 +98,7 @@ const Register = () => {
             </div>
 
             <div>
-                <h1 className="text-center text-4xl font-bold my-8">-------------------OR-------------------</h1>
+            <h1 className="text-center text-2xl lg:text-4xl font-bold my-8">--------------OR--------------</h1>
 
                 <div className="text-center">
                     <button 
